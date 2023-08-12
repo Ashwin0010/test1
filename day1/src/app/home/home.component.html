@@ -1,1 +1,24 @@
-<p>home works!</p>
+<!-- <div style="margin: 10px;">
+    <mat-card style="width: 250px;">
+        <div style="display: flex;"> <div>Name :</div>&nbsp;
+        <div>Ram</div></div>
+       <div style="display: flex;">
+        <div>Email :</div>&nbsp;
+        <div>ram@gmail.com</div>
+       </div>
+       <div style="display: flex;">
+        <div>Department :</div> &nbsp;
+        <div>ECE</div>
+       </div>
+    </mat-card>
+</div> -->
+
+<div style="margin: 10px;display: flex;flex-wrap: wrap;" *ngIf="userList;else newcontainer">
+    <mat-card style="width: 250px;margin: 10px;" *ngFor="let user of userList">
+        <app-user [clguser]="user" (viewDetails)="details($event)"></app-user>
+    </mat-card>
+</div>
+
+<ng-template #newcontainer>
+    "Loading ...."
+</ng-template>

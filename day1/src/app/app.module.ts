@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LocationComponent } from './location/location.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import {MatCardModule} from '@angular/material/card';
+import { UserComponent } from './home/user/user.component';
+import { UserInfoComponent } from './home/user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
     HomeComponent,
     AboutUsComponent,
     LocationComponent,
-    NoPageFoundComponent
+    NoPageFoundComponent,
+    UserComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
