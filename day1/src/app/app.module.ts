@@ -13,6 +13,9 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import {MatCardModule} from '@angular/material/card';
 import { UserComponent } from './home/user/user.component';
 import { UserInfoComponent } from './home/user-info/user-info.component';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { TransformPipe } from './home/transform.pipe';
 
 @NgModule({
   declarations: [
@@ -23,14 +26,17 @@ import { UserInfoComponent } from './home/user-info/user-info.component';
     LocationComponent,
     NoPageFoundComponent,
     UserComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    TransformPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

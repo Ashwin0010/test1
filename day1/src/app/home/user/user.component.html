@@ -1,13 +1,22 @@
-<div style="display: flex;">
-    <div>Name :</div>&nbsp;
-    <div>{{clguser.name}}</div>
+<div [ngClass]="{'cs-dept':clguser.dep == 'CS','other-dep':clguser.dep != 'CS'}">
+    <div style="display: flex;">
+        <div>Name :</div>&nbsp;
+        <div>{{clguser.name}}</div>
+    </div>
+    <div style="display: flex;">
+        <div>Email :</div>&nbsp;
+        <div>{{clguser.email}}</div>
+    </div>
+    <div style="display: flex;">
+        <div>Department :</div> &nbsp;
+        <div>{{clguser.dep}}</div>
+    </div>
+    <div style="display: flex;">
+        <div>Date :</div> &nbsp;
+        <div>{{clguser.date | transform:clguser}}</div>
+    </div>
+    <div>
+        <img [src]="clguser.img" alt="img" style="width: 100%;">
+    </div>
+    <button mat-raised-button color="accent" (click)="getDetails(clguser)">View Details</button>
 </div>
-<div style="display: flex;">
-    <div>Email :</div>&nbsp;
-    <div>{{clguser.email}}</div>
-</div>
-<div style="display: flex;">
-    <div>Department :</div> &nbsp;
-    <div>{{clguser.dep}}</div>
-</div>
-<button mat-raised-button color="accent" (click)="getDetails(clguser)">View Details</button>

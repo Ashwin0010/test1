@@ -19,7 +19,8 @@ export class UserComponent implements OnInit {
 
 
   getDetails(user:any) {
-    console.log(user);
+    // console.log(event);
+    // console.log(event.target);
    this.viewDetails.emit(user);
   }
 
