@@ -14,7 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import { UserComponent } from './home/user/user.component';
 import { UserInfoComponent } from './home/user-info/user-info.component';
 import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TransformPipe } from './home/transform.pipe';
 
 @NgModule({
@@ -33,6 +33,7 @@ import { TransformPipe } from './home/transform.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
