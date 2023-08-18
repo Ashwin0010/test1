@@ -9,7 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LocationComponent } from './location/location.component';
-import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+// import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import {MatCardModule} from '@angular/material/card';
 import { UserComponent } from './home/user/user.component';
 import { UserInfoComponent } from './home/user-info/user-info.component';
@@ -24,7 +24,7 @@ import { TransformPipe } from './home/transform.pipe';
     HomeComponent,
     AboutUsComponent,
     LocationComponent,
-    NoPageFoundComponent,
+    // NoPageFoundComponent,
     UserComponent,
     UserInfoComponent,
     TransformPipe

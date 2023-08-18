@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomeService } from './home.service';
+import { UserComponent } from './user/user.component';
 
 const USERS = [
   {
@@ -78,6 +79,8 @@ export class HomeComponent implements OnInit {
 
   userName: string = '';
 
+  @ViewChild(UserComponent) userComponent!: UserComponent;
+
   constructor(private router: Router, private homeService: HomeService) { }
 
   ngOnInit(): void {
@@ -86,7 +89,10 @@ export class HomeComponent implements OnInit {
 
     setTimeout(() => {
       this.userList = USERS;
-    },100)
+    },100);
+
+
+    this.userComponent.returnNewVar()
   }
 
   details(event: any) {

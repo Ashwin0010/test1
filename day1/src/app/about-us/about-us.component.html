@@ -16,6 +16,16 @@
             <input matInput type="text" formControlName="email" placeholder="Enter email">
         </mat-form-field>
 
+        <!-- <div formArrayName="phoneNos">
+            <div *ngFor="let item of getPhoneNo.controls; let i=index">
+                <div [formGroupName]="i">
+                    <mat-form-field class="example-form-field" appearance="fill" style="width: 100%;margin-left: 10px;margin-right: 10px;margin-top: 10px;">
+                        <input matInput type="text" formControlName="phoneNo" placeholder="Enter PhoneNo">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div> -->
+
         <button mat-raised-button color="accent" [disabled]="!userForm.valid" type="submit">Submit</button>
 
     </form>

@@ -1,9 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  styleUrls: ['./user.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserComponent implements OnInit {
 
@@ -22,6 +24,10 @@ export class UserComponent implements OnInit {
     // console.log(event);
     // console.log(event.target);
    this.viewDetails.emit(user);
+  }
+
+  returnNewVar() {
+    return 'variables'
   }
 
 }

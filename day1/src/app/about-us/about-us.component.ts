@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-about-us',
@@ -11,7 +11,8 @@ export class AboutUsComponent implements OnInit {
   userForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(5)]],
     age:[''],
-    email: ['',[Validators.email]]
+    email: ['',[Validators.email]],
+    phoneNos: this.fb.array([])
   })
 
   constructor(private fb: FormBuilder) { }
@@ -21,6 +22,15 @@ export class AboutUsComponent implements OnInit {
     
   }
 
+  get getPhoneNo(): FormArray  {
+    return this.userForm.get('phoneNos') as FormArray;
+  }
+
+  addNewPhoneNo() {
+    return this.fb.group({
+      phoneNo: ''
+    })
+  }
 
   submit() {
     console.log(this.userForm);
